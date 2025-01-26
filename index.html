@@ -3,15 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cv</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mohammed Abbas Hashem - CV</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .header-left h2 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .header-left p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .header-right img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-right img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sections */
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        section:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            color: #ffd700;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        ul li strong {
+            color: #fff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
                 <h2>Mohammed Abbas Hashem</h2>
-                <p>Software Engineer </p>
+                <p>Software Engineer</p>
                 <p>Baghdad, Iraq | +9647712345678 | mohammad.sp33d12@example.com</p>
             </div>
             <div class="header-right">
@@ -21,56 +117,50 @@
 
         <section class="objective">
             <h2>Objective</h2>
-            <hr>
             <p>
-                I aim to contribute to the growth and innovation in the field of software engineering and AI by utilizing my strong technical background, creativity, and passion for building efficient solutions.
+                I aim to contribute to growth and innovation in software engineering and AI by leveraging my strong technical background and passion for building efficient solutions.
             </p>
         </section>
 
         <section class="experience">
             <h2>Experience</h2>
-            <hr>
             <ul>
                 <li>
                     <strong>Software Engineer Intern</strong> | 2023–2024<br>
                     <ul>
-                        <li class="side-t">Built and enhanced web and mobile applications using JavaScript, Node.js, and modern frameworks.</li>
-                        <li class="side-t">Contributed to backend development and API integration to ensure seamless functionality.</li>
+                        <li>Developed and enhanced web and mobile applications using JavaScript, Node.js, and modern frameworks.</li>
+                        <li>Contributed to backend development and API integration to ensure seamless functionality.</li>
                     </ul>
                 </li>
-               
                 <li>
                     <strong>Application Developer</strong> | 2021–2022<br>
                     <ul>
-                        <li class="side-t">Designed and developed user-friendly applications to streamline workflows and improve productivity.</li>
-                        <li class="side-t">Collaborated with cross-functional teams to deliver high-quality solutions, focusing on performance and scalability.</li>
+                        <li>Designed and developed user-friendly applications to streamline workflows and improve productivity.</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality solutions, focusing on performance and scalability.</li>
                     </ul>
                 </li>
             </ul>
         </section>
-        
-        
+
         <section class="education">
             <h2>Education</h2>
-            <hr>
             <ul>
                 <li>
                     <strong>University of Al-Mustansiriyah</strong> | BSc in Computer Engineering<br>
                     <ul>
-                        <li class="side-t">Specialized in software engineering, AI, and machine learning techniques.</li>
+                        <li>Specialized in software engineering, AI, and machine learning techniques.</li>
                     </ul>
                 </li>
             </ul>
         </section>
-        
+
         <section class="skills">
             <h2>Skills</h2>
-            <hr>
             <ul>
-                <li>Programming Languages: Python, Java, C++, JavaScript, Swift</li>
-                <li>Web Development: HTML, CSS, React</li>
-                <li>Mobile Development: Flutter, React Native</li>
-                <li>Soft Skills: Leadership, Collaboration, Critical Thinking, Problem-Solving</li>
+                <li><strong>Programming:</strong> Python, Java, C++, JavaScript, Swift</li>
+                <li><strong>Web Development:</strong> HTML, CSS, React</li>
+                <li><strong>Mobile Development:</strong> Flutter, React Native</li>
+                <li><strong>Soft Skills:</strong> Leadership, Collaboration, Critical Thinking, Problem-Solving</li>
             </ul>
         </section>
     </div>
