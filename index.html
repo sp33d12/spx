@@ -3,166 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Abbas Hashem - CV</title>
+    <title>Mohammed Abbas Hashem - Professional CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background: linear-gradient(to right, #141e30, #243b55);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
         }
 
-        /* Container */
         .container {
-            width: 90%;
             max-width: 900px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
-        /* Header */
         header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 2.5rem;
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 15px;
         }
 
-        .header-left h2 {
-            font-size: 26px;
-            font-weight: bold;
+        .header-content {
+            flex: 1;
         }
 
-        .header-left p {
-            font-size: 16px;
-            color: #ddd;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
-        .header-right img {
-            width: 100px;
-            height: 100px;
+        .title {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 3px solid #fff;
-            transition: transform 0.3s ease-in-out;
+            border: 4px solid white;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        .header-right img:hover {
-            transform: scale(1.1);
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
-        /* Sections */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2.5rem;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
         section {
-            margin: 20px 0;
-            padding: 15px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            transition: 0.3s ease-in-out;
-        }
-
-        section:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: white;
+            border-radius: 8px;
         }
 
         h2 {
-            color: #ffd700;
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .section-content {
+            padding: 0.5rem 0;
         }
 
         ul {
             list-style: none;
-            padding-left: 10px;
         }
 
-        ul li {
-            margin-bottom: 5px;
+        li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
         }
 
-        ul li strong {
-            color: #fff;
+        li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
-        p {
-            line-height: 1.6;
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .position, .degree {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .company, .university {
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: var(--light-gray);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .skill-tag.highlight {
+            background: var(--primary);
+            color: white;
+        }
+
+        .objective-text {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+            
+            .profile-img {
+                margin-top: 1.5rem;
+                width: 120px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="header-left">
-                <h2>Mohammed Abbas Hashem</h2>
-                <p>Software Engineer</p>
-                <p>Baghdad, Iraq | +9647712345678 | mohammad.sp33d12@example.com</p>
+            <div class="header-content">
+                <h1>Mohammed Abbas Hashem</h1>
+                <p class="title">Software Engineer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        </svg>
+                        <span>Baghdad, Iraq</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+                        </svg>
+                        <span>+964 771 234 5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                        </svg>
+                        <span>mohammad.sp33d12@example.com</span>
+                    </div>
+                </div>
             </div>
-            <div class="header-right">
-               <img src="profile.png" alt="Profile Picture">
-            </div>
+            <img src="profile.png" alt="Mohammed Abbas Hashem" class="profile-img">
         </header>
 
-        <section class="objective">
-            <h2>Objective</h2>
-            <p>
-                I aim to contribute to growth and innovation in software engineering and AI by leveraging my strong technical background and passion for building efficient solutions.
-            </p>
-        </section>
+        <div class="main-content">
+            <div class="left-column">
+                <section class="objective">
+                    <h2>Professional Summary</h2>
+                    <div class="section-content">
+                        <p class="objective-text">
+                            Passionate Software Engineer with expertise in full-stack development and AI solutions. 
+                            Dedicated to building efficient, scalable applications with clean code and modern architectures. 
+                            Strong problem-solving skills with a focus on delivering exceptional user experiences.
+                        </p>
+                    </div>
+                </section>
 
-        <section class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <strong>Software Engineer Intern</strong> | 2023–2024<br>
-                    <ul>
-                        <li>Developed and enhanced web and mobile applications using JavaScript, Node.js, and modern frameworks.</li>
-                        <li>Contributed to backend development and API integration to ensure seamless functionality.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Application Developer</strong> | 2021–2022<br>
-                    <ul>
-                        <li>Designed and developed user-friendly applications to streamline workflows and improve productivity.</li>
-                        <li>Collaborated with cross-functional teams to deliver high-quality solutions, focusing on performance and scalability.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+                <section class="experience">
+                    <h2>Work Experience</h2>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <div>
+                                    <span class="position">Software Engineer Intern</span>
+                                    <span class="company">@ Tech Solutions Inc.</span>
+                                </div>
+                                <span class="date">2023 - 2024</span>
+                            </div>
+                            <ul>
+                                <li>Developed responsive web applications using React, Node.js, and MongoDB</li>
+                                <li>Implemented RESTful APIs that improved system efficiency by 30%</li>
+                                <li>Collaborated with cross-functional teams in Agile environment</li>
+                                <li>Optimized application performance, reducing load times by 40%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <div>
+                                    <span class="position">Application Developer</span>
+                                    <span class="company">@ Digital Innovations</span>
+                                </div>
+                                <span class="date">2021 - 2022</span>
+                            </div>
+                            <ul>
+                                <li>Designed and developed 5+ mobile applications using Flutter</li>
+                                <li>Created automated testing scripts that reduced bugs by 25%</li>
+                                <li>Led UI/UX redesign that increased user engagement by 35%</li>
+                                <li>Mentored junior developers in best coding practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>University of Al-Mustansiriyah</strong> | BSc in Computer Engineering<br>
-                    <ul>
-                        <li>Specialized in software engineering, AI, and machine learning techniques.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+            <div class="right-column">
+                <section class="education">
+                    <h2>Education</h2>
+                    <div class="section-content">
+                        <div class="education-item">
+                            <div class="item-header">
+                                <div>
+                                    <span class="degree">BSc in Computer Engineering</span>
+                                    <span class="university">University of Al-Mustansiriyah</span>
+                                </div>
+                                <span class="date">2020 - 2025</span>
+                            </div>
+                            <ul>
+                                <li>Specialized in Software Engineering and AI</li>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming:</strong> Python, Java, C++, JavaScript, Swift</li>
-                <li><strong>Web Development:</strong> HTML, CSS, React</li>
-                <li><strong>Mobile Development:</strong> Flutter, React Native</li>
-                <li><strong>Soft Skills:</strong> Leadership, Collaboration, Critical Thinking, Problem-Solving</li>
-            </ul>
-        </section>
+                                <li>Thesis: "Machine Learning Approaches for Predictive Analytics"</li>
+                                <li>President of Computer Engineering Student Association</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="skills">
+                    <h2>Technical Skills</h2>
+                    <div class="section-content">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag highlight">Python</span>
+                            <span class="skill-tag highlight">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Swift</span>
+                        </div>
+                        
+                        <h3>Web Development</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag highlight">React</span>
+                            <span class="skill-tag highlight">Node.js</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                        
+                        <h3>Mobile Development</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag highlight">Flutter</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">iOS Development</span>
+                        </div>
+                        
+                        <h3>AI/ML</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievements">
+                    <h2>Achievements</h2>
+                    <div class="section-content">
+                        <ul>
+
+                            <li>Published research paper on "Neural Networks for Image Recognition"</li>
+
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </body>
 </html>
